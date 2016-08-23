@@ -1,0 +1,74 @@
+extends layout
+
+block content
+  .container
+    .row
+      br
+      br
+      br
+      h3 Create presentations quickly
+        p
+          small
+            | Start off by adding some song into the "Add" area.
+      hr
+      h5 Session URL
+        input.form-control(name='sessionUrl',disabled='true',align='center')
+      hr
+  // /container
+  .container
+    .row
+
+      // ADD PANEL
+      .col-md-4
+        h3 Add
+        p
+          | Key in the song fragments that you would wish to publish
+        form(id='addFragForm')
+            textarea.form-control(name='newFrag',id='newFraggie',placeholder='Add your new song fragments',rows='11')
+            br
+          button.btn.btn-default(type='submit') Add
+
+      // PREP PANEL
+      .col-md-4
+        h3 Prep
+        p
+          | All the song fragments for this section
+        div(style='width:320px; height:240px; overflow:auto')
+          table.table-striped(width='100%')
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+            tr
+              th Some lyrics 1
+              
+      // PRESENT PANEL
+      .col-md-4
+        h3 Presenting
+        p
+          | This is the fragment that is presenting now
+        form(method='post', action='session/clear')
+            textarea.form-control(name='newFrag',id='newFraggie',placeholder='Lord I give you my life',rows='11',disabled='true')
+            br
+          button.btn.btn-default(type='submit') Clear
+      
